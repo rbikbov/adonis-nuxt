@@ -1,0 +1,51 @@
+{
+  "name": "adonuxt",
+  "version": "1.0.0",
+  "author": "",
+  "description": "",
+  "license": "MIT",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "serve:dev": "npm run dev",
+    "dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x node server.js",
+    "build": "node ./ace nuxtbuild",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "precommit": "npm run lint",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "adonis-ace": "^3.0.6",
+    "adonis-auth": "^1.0.5",
+    "adonis-commands": "^2.1.5",
+    "adonis-fold": "^3.0.3",
+    "adonis-framework": "^3.0.9",
+    "adonis-lucid": "^3.0.13",
+    "adonis-middleware": "^1.0.10",
+    "adonis-validation-provider": "^3.0.5",
+    "adonis-websocket": "^1.0.2",
+    "axios": "^0.16.2",
+    "cross-env": "^3.1.4",
+    "node-sass": "^4.5.3",
+    "nuxt": "latest",
+    "pug": "^2.0.0-rc.3",
+    "sass-loader": "^6.0.6",
+    "sqlite3": "^3.1.9",
+    "standard": "^8.6.0",
+    "youch": "^2.0.4"
+  },
+  "autoload": {
+    "App": "./app"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.11.0"
+  }
+}
